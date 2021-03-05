@@ -16,11 +16,12 @@ import java.util.List;
 @RestController
 public class HelloController {
 
+    public static final int MAX_INT = 2000;
 
     @GetMapping("hello")
     public List<String> users(){
         List<String> users = new ArrayList<String>();
-        for (int i = 0; i < 2000; i++) {
+        for (int i = 0; i < MAX_INT; i++) {
             users.add("luomo"+i);
         }
         return users;
